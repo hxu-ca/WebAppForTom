@@ -22,3 +22,15 @@ select,
 textarea {
     max-width: 280px;
 }
+.collapse-bar, .ui-accordion-header
+ {
+    background: #6caad4;
+    padding:5px;
+    margin-left:-15px;
+    margin-right:-15px;
+}
+.highlight {
+    font-weight: bold;
+color: #fff;
+padding: .15em;
+}

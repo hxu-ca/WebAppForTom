@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Client Manager";
+    var url = ViewBag.ServiceUrl;
+    var name = ViewBag.AdminName;
+}
+
+@*<h2>@ViewBag.Title</h2>*@
+<br />
+
+<div ng-app="app.client" ng-init="userName='@name'; servicePath='@url'">
+    <div ng-controller="clientVM">
+        @Html.Partial("_Client")
+    </div>
+</div>
+
+@section Links {
+    @Styles.Render("~/Content/themes/base/core.css")
+    @Styles.Render("~/Content/themes/base/theme.css")
+    @Styles.Render("~/Content/themes/base/button.css")
+    @Styles.Render("~/Content/themes/base/dialog.css")
+}
+
+@section  Scripts {
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/App/Loading/loading-bar.js")
+    @Scripts.Render("~/App/client.js")
+}
